@@ -58,7 +58,9 @@ $(document).ready(function() {
       title: $('.title-input').val(),
       url: $('.url-input').val()
      });
-     console.log(blog.toJSON())
+     $('.author-input').val('');
+     $('.title-input').val('');
+     $('.url-input').val('');
      blogs.add(blog);
   })
 });
