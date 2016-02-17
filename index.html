@@ -7,11 +7,6 @@
     <!-- styles -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
-    <!-- scripts -->
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="node_modules/underscore/underscore.js"></script>
-    <script src="node_modules/backbone/backbone.js"></script>
 </head>
 
 <body>
@@ -25,9 +20,33 @@
             <th>URL</th>
             <th>Action</th>
           </tr>
+          <tr>
+            <td><input class="form-control author-input"></td>
+            <td><input class="form-control title-input"></td>
+            <td><input class="form-control url-input"></td>
+            <td><button class="btn btn-primary add-blog">Add</button></td>
+          </tr>
         </thead>
+        <tbody class="blogs-list">
+        </tbody>
       </table>
     </div>
+    <script type="text/template" class="blogs-list-template">
+      <td><span class="author"><%= author %></span></td>
+      <td><span class="title"><%= title %></span></td>
+      <td><span class="url"><%= url %></span></td>
+      <td>
+        <button class="btn btn-warning edit-btn">Edit</button>
+        <button class="btn btn-danger delete-btn">Delete</button>
+      </td>
+    </script>
+
+    <!-- library scripts -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/underscore/underscore.js"></script>
+    <script src="node_modules/backbone/backbone.js"></script>
+    <script src="javascripts/script.js"></script>
 </body>
 
 </html>
